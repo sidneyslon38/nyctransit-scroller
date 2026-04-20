@@ -55,7 +55,7 @@ describe('PhotoSlide', () => {
     render(PhotoSlide, { props: { photo } });
     const img = screen.getByAltText('Morning Rush');
     expect(img).toBeTruthy();
-    expect(img.getAttribute('src')).toBe('/photos/subway-platform.jpg');
+    expect(img.getAttribute('src')).toBe('/photos/transit history images/subway-platform.jpg');
   });
 
   it('renders title, caption, and credit', () => {
