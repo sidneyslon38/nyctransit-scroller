@@ -15,27 +15,17 @@ USAGE EXAMPLE:
 <script>
   let {
     headline, // The main gallery title
+    smallHeadline, // Optional smaller headline above the main title
     intro, // Introductory text below the headline
     byline, // Author attribution
   } = $props();
 </script>
 
 <div class="slide" data-slide>
-  <div class="masthead">
-    <a
-      href="https://www.nycitynewsservice.com/"
-      class="logo"
-      aria-label="NYCity News Service"
-    >
-      <span class="logo-text">
-        <span class="logo-nycity">NYCITY</span><span class="logo-news-service"
-          >News Service</span
-        >
-      </span>
-    </a>
-  </div>
+  
   <div class="content">
     <h1>{headline}</h1>
+    <h2>{smallHeadline}</h2>
     <p class="intro">{intro}</p>
     <p class="byline">{byline}</p>
   </div>
@@ -153,15 +143,28 @@ USAGE EXAMPLE:
     }
   }
 
+   h2 {
+    font-size: 1.25rem;
+    line-height: 1.2;
+    margin: 0 0 1rem;
+    margin-bottom: var(--spacing-md);
+    color: white;
+
+    @container (min-width: 768px) {
+      font-size: 2rem;
+    }
+  }
+
   .intro {
     font-size: 1.0625rem;
     line-height: 1.6;
     opacity: 0.85;
     margin: 0 0 1.5rem;
+    margin-top: var(--spacing-lg);
 
     @container (min-width: 768px) {
       font-size: 1.375rem;
-      line-height: 1.7;
+      line-height: 1.5;
     }
   }
 

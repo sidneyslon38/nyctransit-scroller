@@ -21,8 +21,8 @@ USAGE EXAMPLE:
   } = $props();
 </script>
 
-<div class="slide" data-slide data-photo>
-  <img src="{base}/photos/{photo.filename}" alt={photo.title} />
+<div class="slide" data-slide data-photo data-icon={photo.icon}>
+  <img src="{base}/photos/transit history images/{photo.filename}" alt={photo.title} />
   <div class="caption">
     <div class="caption-inner">
       <h2>{photo.title}</h2>
@@ -38,34 +38,36 @@ USAGE EXAMPLE:
     flex: 0 0 100%;
     position: relative;
     background: black;
+    display: flex;
+    flex-direction: column;
 
     @container (min-width: 768px) {
-      display: flex;
+      flex-direction: row;
     }
   }
 
   .slide img {
     width: 100%;
-    height: 100%;
+    height: auto;
+    flex: 1 1 auto;
+    min-height: 0;
     object-fit: cover;
 
     @container (min-width: 768px) {
       width: 60%;
       flex-shrink: 0;
+      height: 100%;
     }
   }
 
   .caption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 2rem 1.5rem 3.5rem;
+    position: static;
+    padding: 2rem 1.5rem 4.5rem;
     background: linear-gradient(
       to top,
-      rgba(0, 0, 0, 0.85) 0%,
-      rgba(0, 0, 0, 0.4) 70%,
-      transparent 100%
+      rgba(0, 0, 0, 0.98) 0%,
+      rgba(0, 0, 0, 0.92) 100%,
+      rgba(0, 0, 0, 0.92) 100%
     );
     color: white;
 
@@ -100,6 +102,7 @@ USAGE EXAMPLE:
     font-size: 0.9375rem;
     line-height: 1.5;
     opacity: 0.9;
+    white-space: pre-line;
 
     @container (min-width: 768px) {
       font-size: 1.0625rem;

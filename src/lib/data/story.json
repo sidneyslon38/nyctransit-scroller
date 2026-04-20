@@ -1,0 +1,109 @@
+[
+  {
+    "id": 1,
+    "type": "text",
+    "headline": "Two Centuries of Transit",
+    "body": "New York City transit projects are moving at full steam ahead after federal funding was released Thursday, April 16 for the Second Avenue Subway, and the Interborough Express Line advances toward its construction phase. \n\nPublic transit has been integral to the city's development for nearly two centuries, but it's also come a long way since the days of horse-drawn buses and the original 'El' trains. As public transit projects have changed with the decades, so has the city that built them."
+  },
+  {
+    "id": 2,
+    "type": "photo",
+    "icon": "horse.png",
+    "filename": "early_wall_st_NYPL.jpg",
+    "title": "Horses and Carriages",
+    "caption": "In the early 19th century, New York City was quickly growing as a bustling port and commercial center. Early census and local government data estimate that between the years 1800 and 1820, the city’s population more than doubled to over 120,000 residents. \n\nAs New York City expanded both in population and physical size, the need for transit became more important. Although steam technology was advancing rapidly, middle class city residents relied most on horse-drawn carriages or stagecoaches to get around. Hackneys or “hacks” were for-hire taxi carriages, and one of the earliest forms of available transit that wasn’t a private horse.",
+    "credit": "Wall Street early 19th Century / New York Public Library Digital Collection"
+ },
+ {
+    "id": 3,
+    "type": "photo",
+    "icon": "omnibus.png",
+    "filename": "1890_omnibus.jpg",
+    "title": "The Omnibus",
+    "caption": "By 1827, the city needed one that was available for larger groups of commuters. The horse-drawn omnibus was a single, oversized stagecoach designed to hold about 12 passengers. Unlike trolleys, omnibuses did not follow a track, although they did generally run along set routes.",
+    "credit": "Horse-Drawn Omnibus on 5th Avenue, 1890 / New York Public Library Digital Collection"
+  },
+  {
+    "id": 4,
+    "type": "photo",
+    "icon": "trolley.png",
+    "filename": "1895_horse_trolley.png",
+    "title": "Trolleys Debut",
+    "caption": "As the city grew it needed more efficient transit, and omnibuses could only do so much. In 1832, the world’s first horse-drawn street trolley opened on the Bowery between Prince and 14th Street. Following an iron or steel rail track, rides were smoother and allowed for the horses to move faster, and pull more weight. \n\nHorses pulled city trolleys until 1883, when steam-powered trolleys began to replace them. In 1890, electric trolleys were also introduced.",
+    "credit": "Horse-drawn trolley on Broadway near Union Square, 1892 / Wikimedia Commons"
+  },
+  {
+    "id": 5,
+    "type": "photo",
+    "icon": "trolley.png",
+    "filename": "union_sq_trolley_tracks.jpg",
+    "title": "Streetcar Hazards",
+    "caption": "While street trolleys were a big step forward for New York City’s public transit, they were also dangerous. Electric streetcars were much faster than horse drawn ones, and could maim or kill pedestrians. In Union Square, numerous pedestrians were hit along “Dead Man’s Curve,” where trolleys would speed around the park’s corners. \n\nThe monorail, a trolley that balanced along one rail, also had its moment. The Pelham Park and City Island monorail ran for nine years, connecting City Island to the rest of the Bronx. Unfortunately it was also prone to fall over, including on its first ever ride in July 1910 when it tipped off its track and injured dozens of passengers.",
+    "credit": "Union Square trolley tracks, 1891 / New York Public Library Digital Collection"
+  },
+  {
+    "id": 6,
+    "type": "text",
+    "headline": "Urban Trains",
+    "body": "In the 1870s, New York City was becoming a bustling metropolis with over one million residents. Above the busy streets, the city’s first elevated train line opened to riders in 1878, connecting Lower Manhattan and Harlem."
+   },
+   {
+    "id": 7,
+    "type": "photo",
+    "icon": "oldtrain.png",
+    "filename": "elevated_train_nypl.jpg",
+    "title": "The “El” Train",
+    "caption": "Originally pulled by steam engine trains, the first “El” trains ran along Ninth, Sixth, Third and Second Avenue. These trains were another step closer to today’s subway system, and an important feature of the city for nearly eight decades. \n\nWhile the “El” lines supported thousands of New Yorkers’ commutes, they were also incredibly loud, and bits of coal and ash would often rain down on pedestrians each time one passed.",
+    "credit": "Elevated Train, mid-19th century / New York Public Library Digital Collection"
+  },
+  {
+    "id": 8,
+    "type": "photo",
+    "icon": "pneumatic.png",
+    "filename": "beach_pneumatic_transit_1870.jpg",
+    "title": "Pneumatic Transit Line",
+    "caption": "The city’s first official underground subway wouldn’t open until 1904, connecting City Hall to 145th Street and Broadway. Yet plans for an underground train had been discussed as early as the 1860s. In 1869, Alfred Ely Beach opened the lesser-known underground pneumatic rail. \n\nThe Beach Pneumatic Transit Line was a well-decorated passenger car, able to carry 22 passengers for the length of about one block beneath Broadway, connecting Murray and Warren streets. It was considered more of a novelty, but it was also a sign of underground train advancements to come.",
+    "credit": "Beach Pneumatic Transit Line, 1870 / Wikimedia Commons"
+  },
+  {
+    "id": 9,
+    "type": "photo",
+    "icon": "subway.png",
+    "filename": "city_hall_subway_1906.jpg",
+    "title": "The Subway Arrives",
+    "caption": "By the early 20th century, the underground subway was finally open for business, but it still wasn’t yet the MTA of today. The city’s underground train lines were originally owned and operated by two private companies – Manhattan-based Interborough Rapid Transit Company and Brooklyn Rapid Transit. \n\nHowever, privatization did not always mean efficiency. The privately-owned subway lines were becoming severely overcrowded and by 1921, Mayor John Hylan started the New York Transit Commission to create plans for a city-owned subway line. Despite legislative and construction delays, Hylan’s vision came to fruition over a decade later.",
+    "credit": "Postcard of City Hall Subway Station, 1906 / New York Public Library Digital Collection"
+  },
+  {
+    "id": 10,
+    "type": "text",
+    "icon": "subway.png",
+    "headline": "",
+    "body": "Eventually, all three companies merged in 1940 to establish the NYC Transit System, an earlier version of the MTA and a big undertaking for local government. In Brooklyn, this meant the city now controlled the “Williamsburgh power plant, 293 miles of subway and elevated trackage, 437 miles of street railway and 239 miles of bus routes,” writes Mark Feinman for nycsubway.org. Under the unification deal, all “El” train lines in Manhattan and Brooklyn would eventually be discontinued, replaced with connections to existing subway lines. \n\nIn 1932, the first Independent City-Owned Rapid Transit line opened for business after years of planning. Riders dubbed it the Eighth Avenue Subway, and many New Yorkers preferred it to the privately-owned lines. The IND lines tended to run faster and connected neighborhoods previously without access to the subway."
+   },
+   {
+    "id": 11,
+    "type": "photo",
+    "icon": "subway.png",
+    "filename": "Q_train.jpg",
+    "title": "The MTA of Today",
+    "caption": "The subway continued to expand into the outer boroughs through the 1950s and 1960s, although World War II did slow down many initial expansion plans. In 1968, the NYC Transit Authority officially became the Metropolitan Transit Authority, or the MTA, to reflect its growing network of trains. \n\nToday, subway lines are still being expanded and improved upon. The Second Avenue Q line, which runs between Coney Island and 96th Street is set to expand up to 125th Street, connecting to the 6 line. It will not only add additional transfer points to seven other subway lines, but also provide East Harlem residents with increased access to the subway.",
+    "credit": "Side view of passing Q train, 2008 / Wikimedia Commons"
+  },
+  {
+    "id": 12,
+    "type": "photo",
+    "icon": "lightrail.png",
+    "filename": "IBX_MarcHermann.jpg",
+    "title": "Light Rail",
+    "caption": "The Interborough Express Line, announced by Gov. Kathy Hochul, is a 14-mile light rail that plans to connect 900,000 New Yorkers along the outer edges of Queens and Brooklyn to 17 different existing subway lines. It will be built along an existing, unused freight line, and may be the MTA’s “biggest rail expansion in a century,” the New York Times reports.",
+    "credit": "Gov. Kathy Hochul announces next steps for IBX plan, 2022 / Marc Hermann"
+  },
+  {
+    "id": 13,
+    "type": "text",
+    "icon": "lightrail.png",
+    "headline": "Looking Ahead",
+    "body": "The Department of City Planning projects the city’s total population to reach 9 million by 2035. As local government looks to connect every New Yorker with accessible transit, more projects are likely to come, adding to the detailed history that is New York City’s growth."
+   }
+]

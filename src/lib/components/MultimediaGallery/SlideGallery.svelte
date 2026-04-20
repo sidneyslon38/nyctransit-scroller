@@ -20,10 +20,13 @@ USAGE EXAMPLE:
 </SlideGallery>
 -->
 <script>
+  import { base } from '$app/paths';
+
   let { children } = $props();
 
   let currentSlide = $state(0);
   let totalSlides = $state(0);
+  let activeIcon = $state(null);
   let galleryEl;
 
   $effect(() => {
@@ -31,7 +34,17 @@ USAGE EXAMPLE:
       return;
     }
 
-    totalSlides = galleryEl.querySelectorAll('[data-slide]').length;
+    const slides = galleryEl.querySelectorAll('[data-slide]');
+    totalSlides = slides.length;
+    
+    // Extract icon from current slide's data attribute if it exists
+    const currentSlideEl = slides[currentSlide];
+    if (currentSlideEl?.dataset.icon) {
+      activeIcon = currentSlideEl.dataset.icon;
+    } else {
+      activeIcon = null;
+    }
+    
     window.addEventListener('keydown', handleKeydown);
     return () => window.removeEventListener('keydown', handleKeydown);
   });
@@ -82,12 +95,19 @@ USAGE EXAMPLE:
     {#if totalSlides > 1}
       <div class="dots" aria-label="Slide indicators">
         {#each Array.from({ length: totalSlides }, (_, i) => i) as i (i)}
-          <span
-            class="dot"
-            class:active={i === currentSlide}
-            aria-label="Slide {i + 1}"
-            aria-current={i === currentSlide ? 'true' : undefined}
-          ></span>
+          {#if i === currentSlide && activeIcon}
+            <img
+              src="{base}/icons/{activeIcon}"
+              alt=""
+              class="dot active-icon"
+            />
+          {:else}
+            <span
+              class="dot"
+              class:active={i === currentSlide}
+              aria-label="Slide {i + 1}"
+            ></span>
+          {/if}
         {/each}
       </div>
     {/if}
@@ -183,6 +203,12 @@ USAGE EXAMPLE:
     justify-content: center;
     gap: 0.5rem;
     z-index: 5;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .dot {
@@ -196,6 +222,16 @@ USAGE EXAMPLE:
 
   .dot.active {
     opacity: 1;
-    background: var(--color-accent);
+  }
+
+  .active-icon {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    filter: invert(1) brightness(1.2);
+    display: block;
+    background: none;
+    border-radius: 0;
+    opacity: 1;
   }
 </style>

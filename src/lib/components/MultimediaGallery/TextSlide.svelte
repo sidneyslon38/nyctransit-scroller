@@ -17,7 +17,7 @@ USAGE EXAMPLE:
   } = $props();
 </script>
 
-<div class="slide" data-slide>
+<div class="slide" data-slide data-icon={slide.icon}>
   <div class="content">
     <h2>{slide.headline}</h2>
     <p>{slide.body}</p>
@@ -55,5 +55,6 @@ USAGE EXAMPLE:
     line-height: 1.7;
     opacity: 0.8;
     margin: 0;
+    white-space: pre-line;
   }
 </style>

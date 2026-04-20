@@ -1,122 +1,41 @@
-<!--
-@component
-This is your page!
--->
 <script>
-  // Import all the news furniture components
-  import ArticleHeader from '$lib/components/Article/ArticleHeader.svelte';
-  import ArticleBody from '$lib/components/Article/ArticleBody.svelte';
-  import Blockquote from '$lib/components/Article/Blockquote.svelte';
-  import Image from '$lib/components/Media/Image.svelte';
-  import RelatedLinks from '$lib/components/Article/RelatedLinks.svelte';
+  import SlideGallery from '$lib/components/MultimediaGallery/SlideGallery.svelte';
+  import TitleSlide from '$lib/components/MultimediaGallery/TitleSlide.svelte';
+  import PhotoSlide from '$lib/components/MultimediaGallery/PhotoSlide.svelte';
+  import TextSlide from '$lib/components/MultimediaGallery/TextSlide.svelte';
+  import CreditsSlide from '$lib/components/MultimediaGallery/CreditsSlide.svelte';
 
-  // Article metadata
-  let headline = 'Become a force for good. Join our next class.';
-  let byline = 'NYCity News Service';
-  let pubDate = '2026-01-31';
 
-  // Related stories
-  const relatedStories = [
-    {
-      headline:
-        "How America's top news organizations escape rigid publishing systems to design beautiful data-driven stories on deadline.",
-      href: 'https://palewi.re/docs/coding-the-news/',
-    },
-    {
-      headline:
-        'How to install, configure and use Visual Studio Code, GitHub and Copilot',
-      href: 'https://palewi.re/docs/coding-the-news/scripts/week-1/',
-    },
-    {
-      headline: 'How to publish a website with Node.JS and GitHub Actions',
-      href: 'https://palewi.re/docs/coding-the-news/scripts/week-2/',
-    },
-  ];
+  let { data } = $props();
 </script>
 
-<!-- This sets the page title in the browser tab -->
-<svelte:head>
-  <title>{headline} | NYCity News Service</title>
-  <meta
-    name="description"
-    content="At the Craig Newmark Graduate School of Journalism at the City University of New York, change is in our DNA. That comes of being born in 2006, as the digital revolution was transforming our profession in ways none of us could have imagined."
-  />
-</svelte:head>
-
-<!-- Your page content goes here -->
-<div class="container">
-  <!-- Article Header: Headline, byline, and publication date -->
-  <ArticleHeader {headline} {byline} {pubDate} />
-
-  <!-- Lead Image: Animated gif of students at the journalism school -->
-  <Image
-    src="/example-photo.gif"
-    alt="The Craig Newmark Graduate School of Journalism is at 219 West 40th Street in Midtown Manhattan."
-    caption="The Craig Newmark Graduate School of Journalism is at 219 West 40th Street in Midtown Manhattan."
-    credit="Craig Newmark Graduate School of Journalism"
+<SlideGallery>
+  <TitleSlide
+    headline="From Trolleys to Express Trains"
+    smallHeadline="A Brief History History of New York City's Public Transit"
+    intro="As plans for new transit lines advance, from the Second Avenue Subway to the Interborough Express, a brief look back at how far New York City public transit has come"
   />
 
-  <!-- Article Body: The main story text with proper typography -->
-  <ArticleBody>
-    <p class="dropcap">
-      At the Craig Newmark Graduate School of Journalism at the City University
-      of New York, change is in our DNA. That comes of being born in 2006, as
-      the digital revolution was transforming our profession in ways none of us
-      could have imagined.
-    </p>
+  {#each data.story as slide (slide.id)}
+    {#if slide.type === 'photo'}
+      <PhotoSlide photo={slide} />
+    {:else if slide.type === 'text'}
+      <TextSlide {slide} />
+    {/if}
+  {/each}
 
+  <CreditsSlide>
+    <h2>About These Photographs</h2>
     <p>
-      We fashioned a school to teach the latest storytelling, entrepreneurial,
-      and technological skills alongside reporting, writing, and ethics. Beyond
-      that, we’ve crafted a culture that spurns complacency, that isn’t afraid
-      to pivot before the ground under us shifts.
+      All images are sourced from the New York Public Library Digital Collection, Library of Congress, Wikimedia Commons and public domain images on Flickr. For more historical photos of New York City transit, check out the
+      <a href="https://digitalcollections.nypl.org/" target="_blank">
+        New York Public Library</a>'s digital collection.
     </p>
-
-    <p>
-      Our mission is to serve the public interest – by training new journalists
-      from varied economic, racial, and cultural backgrounds who will bring
-      much-needed diversity to newsrooms, by helping mid-career journalists
-      retool their skills, and by partnering with other media organizations to
-      find new paths to excellence.
-    </p>
-
-    <Blockquote attribution="Craig Newmark Graduate School of Journalism">
-      <p>We invite you to be part of our world.</p>
-    </Blockquote>
-
-    <p>
-      Our low tuition rates, along with the added backing of private donors,
-      allow candidates for our master’s degrees in journalism and engagement
-      journalism to receive a world-class education at an affordable price. We
-      also offer a unique bilingual master’s in journalism for students fluent
-      in English and Spanish.
-    </p>
-
-    <p>
-      Our three media centers provide research, training, thought leadership,
-      industry meet-ups, and financial support for quality journalistic work.
-    </p>
-
-    <p>
-      We also offer a robust professional education program through regular
-      evening and weekend workshops. And we support in-depth reporting projects
-      of professional journalists through fellowship grants.
-    </p>
-
-    <p>
-      Classes are led by accomplished full-time faculty and adjuncts, who tap
-      their networks to help students and graduates find internships, freelance
-      opportunities and — the ultimate prize — jobs.
-    </p>
-
-    <p>
-      At a time when our profession is reeling from financial pressures and lack
-      of trust, the Newmark Graduate School of Journalism is committed to
-      producing the next generation of skilled, ethically minded, and diverse
-      journalists.
-    </p>
-  </ArticleBody>
-
-  <!-- Related Stories: Links to other articles -->
-  <RelatedLinks title="Related Stories" links={relatedStories} />
-</div>
+    <br>
+    <h2>Credits</h2>
+    <p>History101.nyc, the Bard Graduate Center, nycsubway.org, NYPL records, NYC Department of Records and Information Services and the Village Preservation Blog.</p>
+    <br>
+    <h2>Icons</h2>
+    <p>Icons used in this presentation are from the Noun Project and are used under a Creative Commons Attribution 3.0 Unported License. Icons by visual language, Vektorify, Bakunetsu Kaito, Firza Alamsyah, Adrien Coquet and Daniel.</p>
+  </CreditsSlide>
+</SlideGallery>
